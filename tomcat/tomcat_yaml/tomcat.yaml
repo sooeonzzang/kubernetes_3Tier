@@ -1,0 +1,29 @@
+#tomcat.yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tomcat-petclinic
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myweb
+  template:
+    metadata:
+      labels:
+        app: myweb
+    spec:
+      containers:
+      - image: docker.io/maintndjs/shop:v1.2
+        imagePullPolicy: Always
+        name: myweb
+        resources:
+          limits:
+            cpu: "0.5"
+            memory: 1Gi
+        ports:
+        - containerPort: 8080
+        env:
+        - name: JAVA_OPTS
+          value: "-Xms1024m -Xmx1024m"
