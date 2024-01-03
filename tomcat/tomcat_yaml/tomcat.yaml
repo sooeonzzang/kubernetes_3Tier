@@ -15,7 +15,7 @@ spec:
         app: mywas
     spec:
       containers:
-      - image: docker.io/maintndjs/was:v1.4
+      - image: docker.io/maintndjs/was:1.4
         imagePullPolicy: Always
         name: mywas
         resources:
