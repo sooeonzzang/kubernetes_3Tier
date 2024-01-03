@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-petclinic
+  name: myweb
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mynginx
+      app: myweb
   template:
     metadata:
       labels:
-        app: mynginx
+        app: myweb
     spec:
       containers:
       - image: docker.io/maintndjs/web:1.0
         imagePullPolicy: Always
-        name: mynginx
+        name: myweb
         ports:
         - containerPort: 80
