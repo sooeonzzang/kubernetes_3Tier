@@ -3,21 +3,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tomcat-petclinic
+  name: mywas
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: myweb
+      app: mywas
   template:
     metadata:
       labels:
-        app: myweb
+        app: mywas
     spec:
       containers:
-      - image: docker.io/maintndjs/shop:v1.2
+      - image: docker.io/maintndjs/was:v1.2
         imagePullPolicy: Always
-        name: myweb
+        name: mywas
         resources:
           limits:
             cpu: "0.5"
