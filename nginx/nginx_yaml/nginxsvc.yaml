@@ -8,9 +8,25 @@ spec:
   - port: 80
     protocol: TCP
     targetPort: 80
-    nodePort: 30001
   selector:
     app: myweb
-  type: NodePort
 status:
   loadBalancer: {}
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  name: myweb2
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: myweb2
+status:
+  loadBalancer: {}
+
