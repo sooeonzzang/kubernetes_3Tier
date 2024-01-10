@@ -9,8 +9,4 @@ data:
     - name: default
       protocol: layer2
       addresses:
-      - 10.100.0.105-10.100.0.110
-    neighbors:
-    - addr: fe80::/64
-      interface: enp0s3
-      disabled: true
+      - 10.100.0.110-10.100.0.115
