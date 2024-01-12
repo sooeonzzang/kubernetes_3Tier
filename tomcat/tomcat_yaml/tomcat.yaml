@@ -9,10 +9,12 @@ spec:
   selector:
     matchLabels:
       app: mywas
+      role: project
   template:
     metadata:
       labels:
         app: mywas
+        role: project
     spec:
       containers:
       - image: docker.io/maintndjs/was:v1.0
@@ -46,10 +48,12 @@ spec:
   selector:
     matchLabels:
       app: mywas2
+      role: project
   template:
     metadata:
       labels:
         app: mywas2
+        role: project
     spec:
       containers:
       - image: docker.io/maintndjs/was:v2.0
