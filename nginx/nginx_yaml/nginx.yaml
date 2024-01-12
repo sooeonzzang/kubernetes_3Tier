@@ -7,10 +7,12 @@ spec:
   selector:
     matchLabels:
       app: myweb
+      role: project
   template:
     metadata:
       labels:
         app: myweb
+        role: project
     spec:
       containers:
       - image: docker.io/maintndjs/web:v1.0
@@ -36,10 +38,12 @@ spec:
   selector:
     matchLabels:
       app: myweb2
+      role: project
   template:
     metadata:
       labels:
         app: myweb2
+        role: project
     spec:
       containers:
       - image: docker.io/maintndjs/web:v2.0
