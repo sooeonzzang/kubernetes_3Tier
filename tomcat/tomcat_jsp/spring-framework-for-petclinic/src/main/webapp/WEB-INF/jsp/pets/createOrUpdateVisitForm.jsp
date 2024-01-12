@@ -36,8 +36,8 @@
 
         <form:form modelAttribute="visit" class="form-horizontal">
             <div class="form-group has-feedback">
-                <petclinic:inputField label="Date" name="date"/>
-                <petclinic:inputField label="Description" name="description"/>
+                <petclinic:inputField label="Sale Date" name="date"/>
+                <petclinic:inputField label="Stock" name="description"/>
             </div>
 
             <div class="form-group">
