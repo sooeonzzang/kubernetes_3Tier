@@ -18,6 +18,10 @@ spec:
       - image: docker.io/maintndjs/web:v1.0
         imagePullPolicy: Always
         name: myweb
+        resources:
+          limits:
+            cpu: "150m"
+            memory: 75Mi
         ports:
         - containerPort: 80
         volumeMounts:
@@ -49,6 +53,10 @@ spec:
       - image: docker.io/maintndjs/web:v2.0
         imagePullPolicy: Always
         name: myweb2
+        resources:
+          limits:
+            cpu: "150m"
+            memory: 75Mi
         ports:
         - containerPort: 80
         volumeMounts:
